@@ -1,23 +1,33 @@
 spring:
   dataSource:
-      name: datasource
-      url: jdbc:mysql://60.210.40.196:25012/app_dzyd?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true
-      username: root
-      password: Root@123!
-      driverClassName: com.mysql.jdbc.Driver
-      maxActive: 2
-      maxIdle: 2
-      minIdle: 2
-      initialSize: 2
-      validationQuery: select 1
-      testOnBorrow: true
-      testOnReturn: false
-      testWhileIdle: false
-      timeBetweenEvictionRunsMillis: 3000
-      minEvictableIdleTimeMillis: 3000
-      maxWait: 3000
-      jmxEnabled: true
-      sqlShow : true
+    name: datasource
+    url: jdbc:mysql://60.210.40.196:25012/app_dzyd?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true
+    username: root
+    password: Root@123!
+    driverClassName: com.mysql.jdbc.Driver
+    maxActive: 2
+    maxIdle: 2
+    minIdle: 2
+    initialSize: 2
+    validationQuery: select 1
+    testOnBorrow: true
+    testOnReturn: false
+    testWhileIdle: false
+    timeBetweenEvictionRunsMillis: 3000
+    minEvictableIdleTimeMillis: 3000
+    maxWait: 3000
+    jmxEnabled: true
+    sqlShow : true
+
+redis:
+  database: 0      # Redis数据库索引（默认为0）
+  host: localhost  # Redis服务器地址
+  port: 6379       # Redis服务器连接端口
+  password:        # Redis服务器连接密码（默认为空）
+  timeout: 0       # 连接超时时间（毫秒）
+  max-total: 100
+  max-wait-millis: 1000
+  seralizerType: JDK   #HESSIAN
 
 mybatis:
   type-aliases-package: com.zibowh.domain.entity

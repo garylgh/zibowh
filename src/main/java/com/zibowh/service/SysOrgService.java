@@ -11,7 +11,6 @@ import javax.annotation.Resource;
 @Service
 public class SysOrgService {
 
-
     @Resource
     private SysOrgMapper sysOrgMapper;
 

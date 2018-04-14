@@ -1,11 +1,10 @@
-package com.zibowh.tool.serialize;
+package com.zibowh.tools.serializer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
  * 序列化工具接口
- * Created by niujunlong on 17/3/21.
  */
 public interface Serializer {
     public static final Logger LOGGER = LogManager.getLogger(Serializer.class);

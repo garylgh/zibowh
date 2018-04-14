@@ -1,9 +1,15 @@
 package com.zibowh.tools.cache;
 
-import com.sun.deploy.association.utility.AppConstants;
 import com.zibowh.config.RedisConfig;
-import com.zibowh.tool.serialize.SerializerFactory;
+import com.zibowh.constants.AppConstants;
+import com.zibowh.tools.serializer.Serializer;
+import com.zibowh.tools.serializer.SerializerFactory;
+import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.stereotype.Service;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.util.SafeEncoder;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -14,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Service
 public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis> {
-    private RoundRobinJedisPool pool;
+    private JedisPool jedisPool;
     @Resource
     private RedisConfig redisConfig;
 
@@ -23,7 +29,7 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
 
     @Override
     public Jedis getResource() {
-        return this.pool.getResource();
+        return this.jedisPool.getResource();
     }
 
 
@@ -32,14 +38,15 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
         try {
             JedisPoolConfig jedisConfig = new JedisPoolConfig();
             LOG.info("redis 初始化配置 {}"+ redisConfig);
-            jedisConfig.setMaxTotal(redisConfig.getMaxConnections());
+            jedisConfig.setMaxTotal(redisConfig.getMaxTotal());
             jedisConfig.setMaxIdle(300);
             jedisConfig.setMinIdle(0);
             jedisConfig.setTestOnBorrow(true);
-            jedisConfig.setMaxWaitMillis(redisConfig.getZkTimeout());
-            pool = RoundRobinJedisPool.create().poolConfig(jedisConfig).timeoutMs(redisConfig.getZkTimeout())
-                    .curatorClient(redisConfig.getZkUrl(), redisConfig.getZkTimeout()).zkProxyDir(redisConfig.getZkPath()).build();
-            serializer = SerializerFactory.create(AppConstants.SerializerTypeEnum.valueOf(redisConfig.getSeralizerType()));
+            jedisConfig.setMaxWaitMillis(redisConfig.getMaxWaitMillis());
+            jedisPool = new JedisPool(jedisConfig,
+                    redisConfig.getHost(), redisConfig.getPort());
+
+            serializer = SerializerFactory.create(AppConstants.SerializerTypeEnum.valueOf("JDK"));
         } catch (Exception e) {
             LOG.error("redis 初始化发生异常 {}", e.getMessage(), e);
         }
