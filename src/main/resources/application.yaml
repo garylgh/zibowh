@@ -1,0 +1,24 @@
+spring:
+  dataSource:
+      name: datasource
+      url: jdbc:mysql://60.210.40.196:25012/app_dzyd?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true
+      username: root
+      password: Root@123!
+      driverClassName: com.mysql.jdbc.Driver
+      maxActive: 2
+      maxIdle: 2
+      minIdle: 2
+      initialSize: 2
+      validationQuery: select 1
+      testOnBorrow: true
+      testOnReturn: false
+      testWhileIdle: false
+      timeBetweenEvictionRunsMillis: 3000
+      minEvictableIdleTimeMillis: 3000
+      maxWait: 3000
+      jmxEnabled: true
+      sqlShow : true
+
+mybatis:
+  type-aliases-package: com.zibowh.domain.entity
+  mapperLocations: classpath:mapper/*.xml

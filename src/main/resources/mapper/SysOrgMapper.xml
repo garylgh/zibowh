@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.SysOrgMapper">
+
+    <resultMap id="resultMap" type="com.zibowh.domain.entity.SysOrgPO">
+        <result column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="userId" property="user_id" jdbcType="VARCHAR"/>
+        <result column="orgName" property="org_name" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="position" property="position" jdbcType="VARCHAR"/>
+        <result column="counties" property="counties" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <insert id="save" parameterType="com.zibowh.domain.entity.SysOrgPO">
+        insert into a_sys_org(id, user_id, org_name, name, position, counties)
+        values(#{id}, #{userId}, #{orgName}, #{name}, #{position}, #{counties})
+    </insert>
+
+    <sql id="baseColumnList">
+        id, user_id, org_name, name, position, counties
+    </sql>
+
+    <select id="selectById" parameterType="java.lang.String"
+            resultMap="resultMap">
+        select
+        <include refid="baseColumnList"/>
+        from a_sys_org
+        where id = #{id}
+    </select>
+</mapper>

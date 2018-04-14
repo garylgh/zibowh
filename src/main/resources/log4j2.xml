@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+    <Properties>
+        <Property name="log-path">./logs/zibowh
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <DiDiLayout/>
+        </Console>
+        <RollingRandomAccessFile name="zibowh-log-appender"
+                                 fileName="${log-path}/zibowh.log"
+                                 immediateFlush="true"
+                                 filePattern="${log-path}/zibowh.log.%d{yyyy-MM-dd}">
+            <DiDiLayout/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"
+                                           modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO" includeLocation="true">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="zibowh-log-appender"/>
+        </Root>
+    </Loggers>
+</Configuration>
