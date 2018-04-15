@@ -8,6 +8,10 @@ mvn spring-boot:run
 2.IDE（Eclipse或IDE）启动
 
     运行App.java
+    
+3.修改端口
+
+    修改application.yaml 的server.port端口号即可
 
 ### 项目结构描述
 
