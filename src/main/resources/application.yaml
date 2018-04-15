@@ -18,16 +18,15 @@ spring:
     maxWait: 3000
     jmxEnabled: true
     sqlShow : true
+  redis:
+     database: 1
+     host: localhost
+     password:
+     port: 6379
+     maxIdle: 300 # 最大空闲数
+     seralizerType: JDK   #HESSIAN
+     # https://blog.csdn.net/truelove12358/article/details/78342167
 
-redis:
-  database: 0      # Redis数据库索引（默认为0）
-  host: localhost  # Redis服务器地址
-  port: 6379       # Redis服务器连接端口
-  password:        # Redis服务器连接密码（默认为空）
-  timeout: 0       # 连接超时时间（毫秒）
-  max-total: 100
-  max-wait-millis: 1000
-  seralizerType: JDK   #HESSIAN
 
 mybatis:
   type-aliases-package: com.zibowh.domain.entity

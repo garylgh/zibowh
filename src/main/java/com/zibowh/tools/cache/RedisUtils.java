@@ -38,15 +38,15 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
         try {
             JedisPoolConfig jedisConfig = new JedisPoolConfig();
             LOG.info("redis 初始化配置 {}"+ redisConfig);
-            jedisConfig.setMaxTotal(redisConfig.getMaxTotal());
-            jedisConfig.setMaxIdle(300);
-            jedisConfig.setMinIdle(0);
+//            jedisConfig.setMaxTotal(redisConfig.getMaxTotal());
+//            jedisConfig.setMaxIdle(300);
+//            jedisConfig.setMinIdle(0);
             jedisConfig.setTestOnBorrow(true);
-            jedisConfig.setMaxWaitMillis(redisConfig.getMaxWaitMillis());
+//            jedisConfig.setMaxWaitMillis(redisConfig.getMaxWaitMillis());
             jedisPool = new JedisPool(jedisConfig,
                     redisConfig.getHost(), redisConfig.getPort());
 
-            serializer = SerializerFactory.create(AppConstants.SerializerTypeEnum.valueOf("JDK"));
+            serializer = SerializerFactory.create(AppConstants.SerializerTypeEnum.valueOf(redisConfig.getSeralizerType()));
         } catch (Exception e) {
             LOG.error("redis 初始化发生异常 {}", e.getMessage(), e);
         }

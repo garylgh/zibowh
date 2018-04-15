@@ -7,6 +7,8 @@ import com.zibowh.service.SysOrgService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @RequestMapping("/api")
 public class SysOrgController {
@@ -31,8 +33,9 @@ public class SysOrgController {
      * 返回值为json
      */
     @GetMapping(value = "/sysorg/query")
-    public SysOrgPO query(@RequestParam("id") String id) {
+    public SysOrgPO query(@RequestParam("id") String id, HttpServletRequest request) {
         SysOrgPO sopo = sysOrgService.query(id);
+        System.out.println("--------------------" + request.getSession().getId());
         return sopo;
     }
 }

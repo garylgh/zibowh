@@ -8,6 +8,11 @@ import com.zibowh.constants.AppConstants;
  */
 public class SerializerFactory {
     public static Serializer create(AppConstants.SerializerTypeEnum type) {
-        return new JDKSerializer();
+        switch (type) {
+            case JDK:
+                return new JDKSerializer();
+            default:
+                return new HessianSerializer();
+        }
     }
 }
