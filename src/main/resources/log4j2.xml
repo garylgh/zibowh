@@ -24,5 +24,6 @@
             <AppenderRef ref="console"/>
             <AppenderRef ref="zibowh-log-appender"/>
         </Root>
+        <logger name="com.zibowh.domain.mapper" level="DEBUG"/>
     </Loggers>
 </Configuration>

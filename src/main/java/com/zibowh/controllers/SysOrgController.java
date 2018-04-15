@@ -2,6 +2,7 @@ package com.zibowh.controllers;
 
 import com.zibowh.config.DataSourceConfig;
 import com.zibowh.controllers.request.SysOrgRequestBean;
+import com.zibowh.controllers.response.BaseResponse;
 import com.zibowh.domain.entity.SysOrgPO;
 import com.zibowh.service.SysOrgService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,9 @@ public class SysOrgController {
      * 返回值为json
      */
     @PostMapping(value = "/sysorg/save")
-    public String save(@RequestBody SysOrgRequestBean sorBean) {
+    public BaseResponse<String> save(@RequestBody SysOrgRequestBean sorBean) {
          sysOrgService.save(sorBean);
-         return "test" + dsconfig.getName();
+         return BaseResponse.build("test1" + dsconfig.getName());
     }
 
     /**
@@ -35,8 +36,8 @@ public class SysOrgController {
      * 返回值为json
      */
     @GetMapping(value = "/sysorg/query")
-    public SysOrgPO query(@RequestParam("id") String id, HttpServletRequest request, HttpSession session) {
+    public BaseResponse<SysOrgPO> query(@RequestParam("id") String id, HttpServletRequest request, HttpSession session) {
         SysOrgPO sopo = sysOrgService.query(id);
-        return sopo;
+        return BaseResponse.build(sopo);
     }
 }
