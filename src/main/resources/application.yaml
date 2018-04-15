@@ -2,6 +2,7 @@ spring:
   dataSource:
     name: datasource
     url: jdbc:mysql://60.210.40.196:25012/app_dzyd?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true
+#    url: jdbc:mysql://localhost:3306/fanliba_main?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true
     username: root
     password: Root@123!
     driverClassName: com.mysql.jdbc.Driver
@@ -24,9 +25,17 @@ spring:
      password:
      port: 6379
      maxIdle: 300 # 最大空闲数
-     seralizerType: JDK   #HESSIAN
+     seralizerType: JDK   # 序列化方式，HESSIAN 或 JDK
      # https://blog.csdn.net/truelove12358/article/details/78342167
-
+  session:
+    store-type: redis
+    redis:
+      namespace: ziboweb:session
+      flush-mode: ON_SAVE # IMMEDIATE 或 ON_SAVE
+    #https://docs.spring.io/spring-session/docs/current/reference/html5/guides/boot-redis.html
+  server:
+    session:
+      timeout: 600 # Session timeout in seconds.
 
 mybatis:
   type-aliases-package: com.zibowh.domain.entity

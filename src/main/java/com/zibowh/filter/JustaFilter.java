@@ -1,9 +1,15 @@
 package com.zibowh.filter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-public class SessionFilter implements Filter {
+@WebFilter("/*")
+public class JustaFilter implements Filter {
+    private final Logger log = LoggerFactory.getLogger(getClass());
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -12,7 +18,7 @@ public class SessionFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
-        System.out.println("TestFilter1");
+        log.info("*********************TestFilter1*********************");
         filterChain.doFilter(servletRequest,servletResponse);
     }
 
