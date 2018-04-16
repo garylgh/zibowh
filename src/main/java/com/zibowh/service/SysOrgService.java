@@ -6,6 +6,7 @@ import com.zibowh.domain.mapper.SysOrgMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 @Service
@@ -29,5 +30,9 @@ public class SysOrgService {
     public SysOrgPO query(String id) {
         SysOrgPO sopo = sysOrgMapper.selectById(id);
         return sopo;
+    }
+
+    public List<SysOrgPO> list(String name) {
+        return sysOrgMapper.getByName(name);
     }
 }

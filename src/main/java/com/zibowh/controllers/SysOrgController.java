@@ -1,15 +1,18 @@
 package com.zibowh.controllers;
 
+import com.github.pagehelper.PageHelper;
 import com.zibowh.config.DataSourceConfig;
 import com.zibowh.controllers.request.SysOrgRequestBean;
 import com.zibowh.controllers.response.BaseResponse;
 import com.zibowh.domain.entity.SysOrgPO;
 import com.zibowh.service.SysOrgService;
+import com.zibowh.tools.PageEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -34,10 +37,24 @@ public class SysOrgController {
     /**
      * GET 方法示例
      * 返回值为json
+     * http://localhost:9000/api/sysorg/page?id=1
      */
     @GetMapping(value = "/sysorg/query")
     public BaseResponse<SysOrgPO> query(@RequestParam("id") String id, HttpServletRequest request, HttpSession session) {
         SysOrgPO sopo = sysOrgService.query(id);
         return BaseResponse.build(sopo);
+    }
+
+    /**
+     * 分页方法演示
+     * 返回值为json
+     * http://localhost:9000/api/sysorg/page?name=ghlin13&pageNum=1&pageSize=3
+     */
+    @GetMapping(value = "/sysorg/page")
+    public List<SysOrgPO> page(@RequestParam("name") String name, PageEntity page) {
+        //第一个参数是第几页；第二个参数是每页显示条数。
+        PageHelper.startPage(page.getPageNum(),page.getPageSize());
+        List<SysOrgPO> sopos = sysOrgService.list(name);
+        return sopos;
     }
 }

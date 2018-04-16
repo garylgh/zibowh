@@ -26,12 +26,16 @@ mvn spring-boot:run
 2. data access level
     
     数据持久化使用mybatis，具体步骤如下：
+    ```
+        注意：推荐使用MyBatis Generator插件生成，详情看参考6
+    ```
+   
     
-    - 添加resources/mapper/xxxMapper.xml文件
-    - 添加对应的实体类com.zibowh.domain.entit
-    y/xxxPO.java
-    - 添加对应com.zibowh.domain.entit
-          y/mapper/xxxMapper.java
+- 添加resources/mapper/xxxMapper.xml文件
+- 添加对应的实体类com.zibowh.domain.entit
+y/xxxPO.java
+- 添加对应com.zibowh.domain.entit
+      y/mapper/xxxMapper.java
           
 3. config
     - 在application.yaml添加相应的配置项
@@ -67,4 +71,9 @@ mvn spring-boot:run
 3. 关于redis
     https://blog.csdn.net/truelove12358/article/details/78342167
 4. 关于spring mvc
+
+5. 关于Mybatis Generator
+    https://blog.csdn.net/isea533/article/details/42102297
+6. 关于分页
+    https://github.com/abel533/MyBatis-Spring-Boot
     
