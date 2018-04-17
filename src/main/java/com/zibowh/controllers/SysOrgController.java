@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -51,10 +53,12 @@ public class SysOrgController {
      * http://localhost:9000/api/sysorg/page?name=ghlin13&pageNum=1&pageSize=3
      */
     @GetMapping(value = "/sysorg/page")
-    public List<SysOrgPO> page(@RequestParam("name") String name, PageEntity page) {
+    public BaseResponse<Map<String, Object>> page(@RequestParam("name") String name, PageEntity page) {
         //第一个参数是第几页；第二个参数是每页显示条数。
         PageHelper.startPage(page.getPageNum(),page.getPageSize());
         List<SysOrgPO> sopos = sysOrgService.list(name);
-        return sopos;
+        Map resultMap = new HashMap();
+        resultMap.put("sysOrgs", sopos);
+        return BaseResponse.build(resultMap);
     }
 }
