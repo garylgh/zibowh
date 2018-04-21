@@ -32,8 +32,8 @@ public class SysOrgController {
      */
     @PostMapping(value = "/sysorg/save")
     public BaseResponse<String> save(@RequestBody SysOrgRequestBean sorBean) {
-         sysOrgService.save(sorBean);
-         return BaseResponse.build("test1" + dsconfig.getName());
+        sysOrgService.save(sorBean);
+        return BaseResponse.build("test1" + dsconfig.getName());
     }
 
     /**
@@ -55,7 +55,7 @@ public class SysOrgController {
     @GetMapping(value = "/sysorg/page")
     public BaseResponse<Map<String, Object>> page(@RequestParam("name") String name, PageEntity page) {
         //第一个参数是第几页；第二个参数是每页显示条数。
-        PageHelper.startPage(page.getPageNum(),page.getPageSize());
+        PageHelper.startPage(page.getPageNum(), page.getPageSize());
         List<SysOrgPO> sopos = sysOrgService.list(name);
         Map resultMap = new HashMap();
         resultMap.put("sysOrgs", sopos);

@@ -52,6 +52,8 @@ y/xxxPO.java
 
     开启App.java上的@EnableRedisHttpSession注解
 
+1. [API swagger文档](http://127.0.0.1:9000/swagger-ui.html)
+
 ### 发布
 1. 打包
     ```

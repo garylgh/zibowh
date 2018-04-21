@@ -8,16 +8,21 @@ import org.apache.logging.log4j.Logger;
  */
 public interface Cache<T> {
     public static final Logger LOG = LogManager.getLogger(Cache.class);
+
     T getResource();
 
     void returnResource(T cache);
+
     Long del(String key);
+
     String setObj(String key, Object value);
+
     String set(String key, String value);
 
     <T> T getObj(String key, Class<T> clazz);
 
     String get(String key);
+
     Boolean exists(String key);
 
     Long persist(String key);
@@ -35,6 +40,7 @@ public interface Cache<T> {
     Long pttl(final String key);
 
     Long setnxObj(String key, Object value);
+
     Long setnx(String key, String value);
 
     String setex(String key, int seconds, Object value);
@@ -49,21 +55,24 @@ public interface Cache<T> {
     Long incr(String key);
 
     Long lPush(String key, String value);
+
     Long lPushObj(String key, Object value);
 
     String rPop(String key);
+
     <T> T rPopObj(String key, Class<T> clazz);
+
+    Double zscore(final String key, final String member);
+
+    Long zcard(final String key);
+
+    Long zcount(final String key, final double min, final double max);
+
+    Long zadd(final String key, final double score, final String member);
 
     interface CacheCallback<T, R> {
 
         R callback(T cache) throws InterruptedException;
     }
-
-    Double zscore(final String key, final String member);
-
-    Long zcard(final String key);
-    Long zcount(final String key, final double min, final double max);
-
-    Long zadd(final String key, final double score, final String member);
 
 }

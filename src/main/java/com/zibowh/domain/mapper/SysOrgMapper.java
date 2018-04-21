@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 @Mapper
-public interface SysOrgMapper extends BaseMapper<SysOrgPO>{
+public interface SysOrgMapper extends BaseMapper<SysOrgPO> {
 
     void save(SysOrgPO sysOrgPO);
 
@@ -15,6 +15,7 @@ public interface SysOrgMapper extends BaseMapper<SysOrgPO>{
 
     /**
      * 按名称查询
+     *
      * @param name
      * @return
      */

@@ -12,8 +12,8 @@
     </resultMap>
 
     <insert id="save" parameterType="com.zibowh.domain.entity.SysOrgPO">
-        insert into a_sys_org(id, user_id, org_name, name, position, counties)
-        values(#{id}, #{userId}, #{orgName}, #{name}, #{position}, #{counties})
+        insert into a_sys_org (id, user_id, org_name, name, position, counties)
+        values (#{id}, #{userId}, #{orgName}, #{name}, #{position}, #{counties})
     </insert>
 
     <sql id="baseColumnList">

@@ -36,10 +36,10 @@ public class HttpUtil {
     private static Logger logger = LoggerFactory.getLogger(HttpUtil.class);
 
     private static CloseableHttpClient httpClient = HttpClientBuilder.create().setMaxConnTotal(500).setMaxConnPerRoute(500).build();
-    
+
     private static CloseableHttpClient httpsClient = null;
-    
-    static{
+
+    static {
         try {
             SSLContext sslContext = new SSLContextBuilder().loadTrustMaterial(null, new TrustStrategy() {
                 public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
@@ -48,7 +48,8 @@ public class HttpUtil {
             }).build();
             SSLConnectionSocketFactory sslFactory = new SSLConnectionSocketFactory(sslContext);
             httpsClient = HttpClientBuilder.create().setSSLSocketFactory(sslFactory).setMaxConnTotal(500).setMaxConnPerRoute(500).build();
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
     }
 
     /**
@@ -89,7 +90,7 @@ public class HttpUtil {
             parameters.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
         }
         try {
-            return doPost(postUrl, null, new UrlEncodedFormEntity(parameters,"UTF-8"), null);
+            return doPost(postUrl, null, new UrlEncodedFormEntity(parameters, "UTF-8"), null);
         } catch (UnsupportedEncodingException e) {
             logger.error("HttpUtil---doPost--error", e);
         }
@@ -246,8 +247,7 @@ public class HttpUtil {
      * 执行post 请求
      *
      * @param postUrl
-     * @param content
-     * StringEntity 提交参数
+     * @param content StringEntity 提交参数
      * @return
      */
     public static <T> T doPost(String postUrl, String content, Class<T> clazz) {
@@ -273,8 +273,7 @@ public class HttpUtil {
      *
      * @param postUrl
      * @param headers
-     * @param content
-     * StringEntity 提交实体
+     * @param content StringEntity 提交实体
      * @return
      */
     public static <T> T doPost(String postUrl, List<Header> headers, String content,
@@ -291,20 +290,20 @@ public class HttpUtil {
      */
     public static CloseableHttpResponse doHttpRequest(HttpUriRequest request) {
         String url = request.getURI().toString();
-        CloseableHttpResponse  response = null;
+        CloseableHttpResponse response = null;
         try {
             long beginTime = System.currentTimeMillis();
             if (request instanceof HttpRequestBase) {
-                if(((HttpRequestBase) request).getConfig()==null){
+                if (((HttpRequestBase) request).getConfig() == null) {
                     ((HttpRequestBase) request).setConfig(RequestConfig.custom().setConnectTimeout(5000).setSocketTimeout(10000).build());
                 }
             }
-            if(request.getURI().toString().startsWith("https:")){
+            if (request.getURI().toString().startsWith("https:")) {
                 response = httpsClient.execute(request);
-            }else {
+            } else {
                 response = httpClient.execute(request);
             }
-           
+
             if (response != null) {
                 long endTime = System.currentTimeMillis();
                 int statusCode = response.getStatusLine().getStatusCode();

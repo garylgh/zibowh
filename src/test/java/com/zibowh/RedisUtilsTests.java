@@ -10,12 +10,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RedisUtilsTests {
-	@Autowired
-	private RedisUtils jedis;
+    @Autowired
+    private RedisUtils jedis;
 
-	@Test
-	public void testRedis() {
-		jedis.set("haha", "hahaValue");
-	}
+    @Test
+    public void testRedis() {
+        jedis.set("haha", "hahaValue");
+    }
 
 }

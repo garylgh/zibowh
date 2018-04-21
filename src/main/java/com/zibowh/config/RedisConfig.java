@@ -25,7 +25,7 @@ public class RedisConfig {
     private String seralizerType;
 
     public String getSeralizerType() {
-        if(StringUtils.isBlank(seralizerType)){
+        if (StringUtils.isBlank(seralizerType)) {
             return AppConstants.SerializerTypeEnum.HESSIAN.name();
         }
         return seralizerType;

@@ -16,6 +16,7 @@ public interface Serializer {
 
     /**
      * 序列化
+     *
      * @param object
      * @return
      */
@@ -23,6 +24,7 @@ public interface Serializer {
 
     /**
      * 反序列化
+     *
      * @param objectData
      * @param clazz
      * @param <T>
