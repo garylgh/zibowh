@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBaseOwnerAptitudeMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBaseOwnerAptitude">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="AP_ID" jdbcType="VARCHAR" property="apId" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="CARDNAME" jdbcType="VARCHAR" property="cardname" />
+    <result column="CARDNUM" jdbcType="VARCHAR" property="cardnum" />
+    <result column="GRANTORGAN" jdbcType="VARCHAR" property="grantorgan" />
+    <result column="CARDTIME" jdbcType="TIMESTAMP" property="cardtime" />
+    <result column="QIYEPHOTO" jdbcType="VARCHAR" property="qiyephoto" />
+    <result column="TEXT" jdbcType="LONGVARCHAR" property="text" />
+  </resultMap>
+</mapper>

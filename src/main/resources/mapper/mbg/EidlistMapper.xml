@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.EidlistMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.Eidlist">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="EID_ID" jdbcType="VARCHAR" property="eidId" />
+    <result column="CARD_NO" jdbcType="VARCHAR" property="cardNo" />
+    <result column="EID_BINDING_TIME" jdbcType="TIMESTAMP" property="eidBindingTime" />
+    <result column="EID_TYPE" jdbcType="INTEGER" property="eidType" />
+    <result column="EID_TIME" jdbcType="DATE" property="eidTime" />
+  </resultMap>
+</mapper>

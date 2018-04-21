@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TOperatingProceduresMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TOperatingProcedures">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="GOODS_UN" jdbcType="VARCHAR" property="goodsUn" />
+    <result column="GOODS_NAME" jdbcType="VARCHAR" property="goodsName" />
+    <result column="OP_KIND" jdbcType="INTEGER" property="opKind" />
+    <result column="OP_NUMBER" jdbcType="INTEGER" property="opNumber" />
+    <result column="OP_TYPE" jdbcType="INTEGER" property="opType" />
+    <result column="OP_INFO" jdbcType="INTEGER" property="opInfo" />
+    <result column="DEL_FLG" jdbcType="INTEGER" property="delFlg" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="TIMESTAMP" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+</mapper>

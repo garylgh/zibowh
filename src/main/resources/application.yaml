@@ -41,7 +41,7 @@ spring:
 
 mybatis:
   type-aliases-package: com.zibowh.domain.entity
-  mapperLocations: classpath:mapper/*.xml
+  mapperLocations: classpath:mapper/**/*.xml
 
 #mappers 多个接口时逗号隔开
 mapper:

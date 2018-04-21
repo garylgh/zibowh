@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.CarListMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.CarList">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="VEHICLE_ID" jdbcType="VARCHAR" property="vehicleId" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="VEHICLE_CODE" jdbcType="VARCHAR" property="vehicleCode" />
+    <result column="VEHICLE_TYPE" jdbcType="INTEGER" property="vehicleType" />
+    <result column="COLOR" jdbcType="INTEGER" property="color" />
+    <result column="MGRAREA" jdbcType="VARCHAR" property="mgrarea" />
+    <result column="CCERTWORD" jdbcType="VARCHAR" property="ccertword" />
+    <result column="CCERTID" jdbcType="VARCHAR" property="ccertid" />
+    <result column="FIRSTDATE" jdbcType="DATE" property="firstdate" />
+    <result column="EXPIREDATE" jdbcType="DATE" property="expiredate" />
+    <result column="GRANTORGAN" jdbcType="VARCHAR" property="grantorgan" />
+    <result column="TON" jdbcType="DECIMAL" property="ton" />
+    <result column="POTCUBAGE" jdbcType="VARCHAR" property="potcubage" />
+    <result column="ISJ" jdbcType="INTEGER" property="isj" />
+    <result column="ISQFS" jdbcType="INTEGER" property="isqfs" />
+    <result column="ISBZP" jdbcType="INTEGER" property="isbzp" />
+    <result column="CCERTSTATE" jdbcType="INTEGER" property="ccertstate" />
+    <result column="SECMAINSTATE" jdbcType="INTEGER" property="secmainstate" />
+    <result column="NEXTSECMDATE" jdbcType="DATE" property="nextsecmdate" />
+    <result column="VCLTECRANK" jdbcType="INTEGER" property="vcltecrank" />
+    <result column="NEXTTECDATE" jdbcType="DATE" property="nexttecdate" />
+    <result column="CHECKRESULT" jdbcType="INTEGER" property="checkresult" />
+    <result column="NEXTCHECKDATE" jdbcType="DATE" property="nextcheckdate" />
+    <result column="WHCIMONEY" jdbcType="DECIMAL" property="whcimoney" />
+    <result column="JSEMP_ID" jdbcType="VARCHAR" property="jsempId" />
+    <result column="YYEMPID" jdbcType="VARCHAR" property="yyempid" />
+    <result column="SYSDATAID" jdbcType="VARCHAR" property="sysdataid" />
+    <result column="LASTSYNCTIME" jdbcType="TIMESTAMP" property="lastsynctime" />
+    <result column="AYTSERVERSTATE" jdbcType="INTEGER" property="aytserverstate" />
+    <result column="AYTTOKEN" jdbcType="VARCHAR" property="ayttoken" />
+    <result column="AYTSTARTTIME" jdbcType="TIMESTAMP" property="aytstarttime" />
+    <result column="SYSSTATE" jdbcType="INTEGER" property="sysstate" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="SFAZGPS" jdbcType="INTEGER" property="sfazgps" />
+    <result column="GPSYXZT" jdbcType="INTEGER" property="gpsyxzt" />
+    <result column="GPSYYS" jdbcType="VARCHAR" property="gpsyys" />
+    <result column="CURYSZT" jdbcType="INTEGER" property="curyszt" />
+    <result column="YDCHANGETIME" jdbcType="TIMESTAMP" property="ydchangetime" />
+    <result column="YDRECTIME" jdbcType="TIMESTAMP" property="ydrectime" />
+    <result column="YDYY" jdbcType="VARCHAR" property="ydyy" />
+    <result column="YDSJ" jdbcType="TIMESTAMP" property="ydsj" />
+    <result column="SECMILE" jdbcType="INTEGER" property="secmile" />
+    <result column="SECMDATE" jdbcType="DATE" property="secmdate" />
+    <result column="GVEHICLE_ID" jdbcType="VARCHAR" property="gvehicleId" />
+    <result column="GVEHICLE_CODE" jdbcType="VARCHAR" property="gvehicleCode" />
+    <result column="ISGC" jdbcType="INTEGER" property="isgc" />
+    <result column="EID_NO" jdbcType="VARCHAR" property="eidNo" />
+    <result column="PROUCT_TYPE" jdbcType="VARCHAR" property="prouctType" />
+    <result column="PHOTO" jdbcType="VARCHAR" property="photo" />
+    <result column="WHCIENDDATE" jdbcType="DATE" property="whcienddate" />
+    <result column="MTYPE" jdbcType="VARCHAR" property="mtype" />
+    <result column="QYCID" jdbcType="VARCHAR" property="qycid" />
+    <result column="GCID" jdbcType="VARCHAR" property="gcid" />
+    <result column="DEVICE_NAME" jdbcType="CHAR" property="deviceName" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.JcResultMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.JcResult">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="BILL_ID" jdbcType="VARCHAR" property="billId" />
+    <result column="JC_NAME" jdbcType="VARCHAR" property="jcName" />
+    <result column="JC_TIME" jdbcType="TIMESTAMP" property="jcTime" />
+    <result column="JC_RES" jdbcType="INTEGER" property="jcRes" />
+  </resultMap>
+</mapper>

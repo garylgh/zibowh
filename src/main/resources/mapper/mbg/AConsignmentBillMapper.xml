@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.AConsignmentBillMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.AConsignmentBill">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="tyd_id" jdbcType="VARCHAR" property="tydId" />
+    <result column="single_time" jdbcType="TIMESTAMP" property="singleTime" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="distribution_time" jdbcType="TIMESTAMP" property="distributionTime" />
+    <result column="distribution_person" jdbcType="VARCHAR" property="distributionPerson" />
+    <result column="receive_id" jdbcType="VARCHAR" property="receiveId" />
+    <result column="receive_unit" jdbcType="VARCHAR" property="receiveUnit" />
+    <result column="receive_unit_tel" jdbcType="VARCHAR" property="receiveUnitTel" />
+    <result column="receive_unit_contact" jdbcType="VARCHAR" property="receiveUnitContact" />
+    <result column="carrier_id" jdbcType="VARCHAR" property="carrierId" />
+    <result column="carrier_unit" jdbcType="VARCHAR" property="carrierUnit" />
+    <result column="carrier_unit_tel" jdbcType="VARCHAR" property="carrierUnitTel" />
+    <result column="carrier_unit_contact" jdbcType="VARCHAR" property="carrierUnitContact" />
+    <result column="consignment_id" jdbcType="VARCHAR" property="consignmentId" />
+    <result column="consignment_unit" jdbcType="VARCHAR" property="consignmentUnit" />
+    <result column="consignment_unit_tel" jdbcType="VARCHAR" property="consignmentUnitTel" />
+    <result column="consignment_unit_contact" jdbcType="VARCHAR" property="consignmentUnitContact" />
+    <result column="orders_id" jdbcType="VARCHAR" property="ordersId" />
+    <result column="orders_name" jdbcType="VARCHAR" property="ordersName" />
+    <result column="orders_time" jdbcType="TIMESTAMP" property="ordersTime" />
+    <result column="reject_id" jdbcType="VARCHAR" property="rejectId" />
+    <result column="reject_name" jdbcType="VARCHAR" property="rejectName" />
+    <result column="reject_time" jdbcType="TIMESTAMP" property="rejectTime" />
+    <result column="reject_reason" jdbcType="VARCHAR" property="rejectReason" />
+    <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime" />
+    <result column="upd_user" jdbcType="VARCHAR" property="updUser" />
+    <result column="upd_time" jdbcType="TIMESTAMP" property="updTime" />
+    <result column="yj_time" jdbcType="TIMESTAMP" property="yjTime" />
+    <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+    <result column="goods_weight" jdbcType="DOUBLE" property="goodsWeight" />
+    <result column="all_orders" jdbcType="INTEGER" property="allOrders" />
+    <result column="chai_flg" jdbcType="INTEGER" property="chaiFlg" />
+    <result column="delivery_address" jdbcType="VARCHAR" property="deliveryAddress" />
+    <result column="delivery_address_info" jdbcType="VARCHAR" property="deliveryAddressInfo" />
+    <result column="unload_address" jdbcType="VARCHAR" property="unloadAddress" />
+    <result column="unload_address_info" jdbcType="VARCHAR" property="unloadAddressInfo" />
+    <result column="surplus" jdbcType="VARCHAR" property="surplus" />
+    <result column="del_flg" jdbcType="INTEGER" property="delFlg" />
+  </resultMap>
+</mapper>

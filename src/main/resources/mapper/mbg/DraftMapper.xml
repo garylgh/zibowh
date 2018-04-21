@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.DraftMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.Draft">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="OWNERTYPE" jdbcType="VARCHAR" property="ownertype" />
+    <result column="OWNERNAME" jdbcType="VARCHAR" property="ownername" />
+    <result column="OWNERJC" jdbcType="VARCHAR" property="ownerjc" />
+    <result column="ENGLISH" jdbcType="VARCHAR" property="english" />
+    <result column="ZHUCEZIBEN" jdbcType="VARCHAR" property="zhuceziben" />
+    <result column="ZHUCETIME" jdbcType="TIMESTAMP" property="zhucetime" />
+    <result column="AREA" jdbcType="DOUBLE" property="area" />
+    <result column="PERSNUM" jdbcType="VARCHAR" property="persnum" />
+    <result column="BUSINESSID" jdbcType="VARCHAR" property="businessid" />
+    <result column="TONGYICODE" jdbcType="VARCHAR" property="tongyicode" />
+    <result column="ZUZHICODE" jdbcType="VARCHAR" property="zuzhicode" />
+    <result column="LICENSECODE" jdbcType="VARCHAR" property="licensecode" />
+    <result column="FIRSTDATE" jdbcType="DATE" property="firstdate" />
+    <result column="EXPIREDATE" jdbcType="DATE" property="expiredate" />
+    <result column="GRANTORGAN" jdbcType="VARCHAR" property="grantorgan" />
+    <result column="OWNERADDR" jdbcType="VARCHAR" property="owneraddr" />
+    <result column="AZIPCODE" jdbcType="VARCHAR" property="azipcode" />
+    <result column="MGRAREA" jdbcType="VARCHAR" property="mgrarea" />
+    <result column="MCERTWORD" jdbcType="VARCHAR" property="mcertword" />
+    <result column="MCERTID" jdbcType="VARCHAR" property="mcertid" />
+    <result column="STATE" jdbcType="VARCHAR" property="state" />
+    <result column="QCEXAMIERESULT" jdbcType="VARCHAR" property="qcexamieresult" />
+    <result column="LXR" jdbcType="VARCHAR" property="lxr" />
+    <result column="PTTEL" jdbcType="VARCHAR" property="pttel" />
+    <result column="SYSSTATE" jdbcType="INTEGER" property="sysstate" />
+    <result column="OWNERFLAG" jdbcType="VARCHAR" property="ownerflag" />
+    <result column="AYTSERVERSTATE" jdbcType="INTEGER" property="aytserverstate" />
+    <result column="AYTTOKEN" jdbcType="VARCHAR" property="ayttoken" />
+    <result column="AYTSTARTTIME" jdbcType="TIMESTAMP" property="aytstarttime" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="CREATEOR" jdbcType="VARCHAR" property="createor" />
+    <result column="ORGAN_ID" jdbcType="VARCHAR" property="organId" />
+    <result column="SYSDATAID" jdbcType="VARCHAR" property="sysdataid" />
+    <result column="LASTSYNCTIME" jdbcType="TIMESTAMP" property="lastsynctime" />
+    <result column="OWNERZT" jdbcType="INTEGER" property="ownerzt" />
+    <result column="OWNERXZ" jdbcType="VARCHAR" property="ownerxz" />
+    <result column="ZHUCEDIZHI" jdbcType="VARCHAR" property="zhucedizhi" />
+    <result column="FARENNAME" jdbcType="VARCHAR" property="farenname" />
+    <result column="CARD" jdbcType="INTEGER" property="card" />
+    <result column="IDCARD" jdbcType="VARCHAR" property="idcard" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="PHOTO" jdbcType="VARCHAR" property="photo" />
+    <result column="Column_45" jdbcType="CHAR" property="column45" />
+    <result column="Column_46" jdbcType="CHAR" property="column46" />
+    <result column="Column_47" jdbcType="CHAR" property="column47" />
+    <result column="Column_48" jdbcType="CHAR" property="column48" />
+    <result column="Column_49" jdbcType="CHAR" property="column49" />
+  </resultMap>
+</mapper>

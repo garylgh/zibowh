@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBaseOwnerMgrareaMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBaseOwnerMgrarea">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="GOOD_NO" jdbcType="VARCHAR" property="goodNo" />
+    <result column="GOOD_NAME" jdbcType="VARCHAR" property="goodName" />
+    <result column="GOOD_LB" jdbcType="VARCHAR" property="goodLb" />
+    <result column="GOOD_XB" jdbcType="VARCHAR" property="goodXb" />
+  </resultMap>
+</mapper>

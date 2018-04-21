@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.EmpApplyMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.EmpApply">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="APPLY_ID" jdbcType="VARCHAR" property="applyId" />
+    <result column="APPLYTIME" jdbcType="TIMESTAMP" property="applytime" />
+    <result column="APPLYPEOPLE" jdbcType="VARCHAR" property="applypeople" />
+    <result column="APPLYSTATE" jdbcType="VARCHAR" property="applystate" />
+    <result column="OPERATION" jdbcType="VARCHAR" property="operation" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="TOWNSHIPRS" jdbcType="INTEGER" property="townshiprs" />
+    <result column="COUNTYRS" jdbcType="INTEGER" property="countyrs" />
+    <result column="CITYRS" jdbcType="INTEGER" property="cityrs" />
+    <result column="RESUT" jdbcType="VARCHAR" property="resut" />
+    <result column="CREAT_USER" jdbcType="VARCHAR" property="creatUser" />
+    <result column="CREAT_TIME" jdbcType="TIMESTAMP" property="creatTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+</mapper>

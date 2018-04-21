@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.AQualificationMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.AQualification">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="QU_ID" jdbcType="VARCHAR" property="quId" />
+    <result column="STAFF_ID" jdbcType="VARCHAR" property="staffId" />
+    <result column="QU_TYPE" jdbcType="INTEGER" property="quType" />
+    <result column="QU_NAME" jdbcType="VARCHAR" property="quName" />
+    <result column="ISSUING_AUTHORITY" jdbcType="VARCHAR" property="issuingAuthority" />
+    <result column="ISSUING_TIME" jdbcType="DATE" property="issuingTime" />
+    <result column="PERIOD_VALIDITY" jdbcType="DATE" property="periodValidity" />
+    <result column="CERTIFICATE_ACCESOR" jdbcType="VARCHAR" property="certificateAccesor" />
+    <result column="QU_NUM" jdbcType="VARCHAR" property="quNum" />
+    <result column="QU_URL" jdbcType="VARCHAR" property="quUrl" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="DATE" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="DATE" property="updTime" />
+  </resultMap>
+</mapper>

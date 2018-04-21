@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.AResumeMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.AResume">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="RESUME_ID" jdbcType="VARCHAR" property="resumeId" />
+    <result column="EMP_ID" jdbcType="VARCHAR" property="empId" />
+    <result column="ENTRY_TIME" jdbcType="DATE" property="entryTime" />
+    <result column="DAPARTURE_TIME" jdbcType="DATE" property="dapartureTime" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="LEAVE_EVALUTION" jdbcType="VARCHAR" property="leaveEvalution" />
+    <result column="LEAVE_DESCRIPTION" jdbcType="VARCHAR" property="leaveDescription" />
+    <result column="RESUME_DEPT" jdbcType="VARCHAR" property="resumeDept" />
+    <result column="RESUME_DUTY" jdbcType="VARCHAR" property="resumeDuty" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="DATE" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="DATE" property="updTime" />
+    <result column="HT_FJ" jdbcType="LONGVARCHAR" property="htFj" />
+  </resultMap>
+</mapper>

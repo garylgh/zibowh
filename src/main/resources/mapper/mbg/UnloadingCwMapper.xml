@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.UnloadingCwMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.UnloadingCw">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CWBH" jdbcType="VARCHAR" property="cwbh" />
+    <result column="INOUTLOADINGER_REGION_NO" jdbcType="VARCHAR" property="inoutloadingerRegionNo" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="CARGO_NUMBER" jdbcType="VARCHAR" property="cargoNumber" />
+    <result column="CARGO_NAME" jdbcType="VARCHAR" property="cargoName" />
+    <result column="INPUT_DATE" jdbcType="DATE" property="inputDate" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="TIMESTAMP" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+</mapper>
