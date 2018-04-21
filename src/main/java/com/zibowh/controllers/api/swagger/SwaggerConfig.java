@@ -54,4 +54,9 @@ public class SwaggerConfig {
     public Docket deliveryBiz() {
         return this.docket("在途运单管理", "在途运单管理", "v1", regex(APIController.apiPath + "delivery_biz/.*"));
     }
+
+    @Bean
+    public Docket cargoCheck() {
+        return this.docket("运单装卸货检查相关", "运单装卸货检查相关", "v1", regex(APIController.apiPath + "cargo_check/.*"));
+    }
 }
