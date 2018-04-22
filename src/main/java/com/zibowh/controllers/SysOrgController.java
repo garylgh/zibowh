@@ -1,19 +1,19 @@
 package com.zibowh.controllers;
 
-import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.Page;
 import com.zibowh.config.DataSourceConfig;
 import com.zibowh.controllers.request.SysOrgRequestBean;
 import com.zibowh.controllers.response.BaseResponse;
 import com.zibowh.domain.entity.SysOrgPO;
 import com.zibowh.service.SysOrgService;
-import com.zibowh.tools.PageEntity;
+import com.zibowh.tools.pageable.PageEntity;
+import com.zibowh.tools.pageable.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -55,10 +55,11 @@ public class SysOrgController {
     @GetMapping(value = "/sysorg/page")
     public BaseResponse<Map<String, Object>> page(@RequestParam("name") String name, PageEntity page) {
         //第一个参数是第几页；第二个参数是每页显示条数。
-        PageHelper.startPage(page.getPageNum(), page.getPageSize());
-        List<SysOrgPO> sopos = sysOrgService.list(name);
+        PageUtil.pageHelper(page);
+        Page<SysOrgPO> sopos = (Page<SysOrgPO>) sysOrgService.list(name);
         Map resultMap = new HashMap();
         resultMap.put("sysOrgs", sopos);
+        resultMap.put("sysOrgNames", PageUtil.map(sopos, SysOrgPO::getName));
         return BaseResponse.build(resultMap);
     }
 }
