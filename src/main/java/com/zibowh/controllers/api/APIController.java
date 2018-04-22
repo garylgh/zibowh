@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 abstract public class APIController {
 
-    public static final String apiPath = "/api/v1/";
+    public static final String apiBasePath = "/api/v1/";
 
     public static final String tokenHeader = "Authorization";
 

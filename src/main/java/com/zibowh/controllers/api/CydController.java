@@ -1,18 +1,22 @@
-package com.zibowh.controllers.api.deliveryBiz;
+package com.zibowh.controllers.api;
 
 import com.github.pagehelper.PageInfo;
-import com.zibowh.controllers.api.APIController;
+import com.zibowh.controllers.payload.BizBill;
 import com.zibowh.controllers.response.BaseResponse;
-import com.zibowh.controllers.response.payload.BizBill;
-import com.zibowh.controllers.response.payload.CheckResultBeforeDeparture;
+import com.zibowh.domain.entity.mbg.Jcszx;
 import io.swagger.annotations.*;
 import lombok.Data;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-public class DeliveryBizController extends APIController {
+@Api(value = "承运单管理")
+public class CydController extends APIController {
+
+    public static final String apiPath = apiBasePath + "/delivery_biz/";
 
     @Data
     @ApiModel
@@ -25,7 +29,7 @@ public class DeliveryBizController extends APIController {
         String bizBillId;
     }
 
-    @PatchMapping(value = apiPath + "delivery_biz/accept")
+    @PatchMapping(value = apiPath + "accept")
     @ApiOperation(value = "接单或者拒单 消费方:车载APP")
     @ApiImplicitParams({
             @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header")
@@ -36,7 +40,7 @@ public class DeliveryBizController extends APIController {
         throw new RuntimeException("stub");
     }
 
-    @GetMapping(value = apiPath + "delivery_biz/{id}")
+    @GetMapping(value = apiPath + "{id}")
     @ApiOperation(value = "运单详情")
     @ApiImplicitParams({
             @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header")
@@ -48,7 +52,7 @@ public class DeliveryBizController extends APIController {
         throw new RuntimeException("stub");
     }
 
-    @GetMapping(value = apiPath + "delivery_biz/search")
+    @GetMapping(value = apiPath + "search")
     @ApiOperation(value = "查询推送运单一览查询")
     @ApiImplicitParams({
             @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header"),
@@ -65,53 +69,31 @@ public class DeliveryBizController extends APIController {
         throw new RuntimeException("stub");
     }
 
-    @GetMapping(value = apiPath + "delivery_biz/{id}/check_result_before_departure")
+    @GetMapping(value = apiPath + "{id}/check/before/departure")
     @ApiOperation(value = "查询出车前检查信息一览 消费方:车载APP")
     @ApiImplicitParams({
             @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header")
     })
-    public BaseResponse<CheckResultBeforeDeparture> getCheckBeforeDeparture(
+    public BaseResponse<List<Jcszx>> getCheckBeforeDeparture(
             @ApiParam(allowEmptyValue = true, value = "运单id")
             @PathVariable(value = "id") String id
     ) {
+        /**
+         * `检查设置项` 中的ownerId(所属单位id)关联的是哪个外键呢
+         */
         throw new RuntimeException("stub");
     }
 
-    @PostMapping(value = apiPath + "delivery_biz/{id}/check_result_before_departure")
+    @PostMapping(value = apiPath + "{id}/check/before/departure")
     @ApiOperation(value = "保存出车前检查结果")
     @ApiImplicitParams({
             @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header")
     })
-    public BaseResponse<CheckResultBeforeDeparture> saveCheckResultBeforeDeparture(
+    public BaseResponse<List<Jcszx>> saveCheckBeforeDeparture(
             @ApiParam(allowEmptyValue = true, value = "运单id")
             @PathVariable(value = "id") String id
     ) {
         throw new RuntimeException("stub");
     }
-
-    @PatchMapping(value = apiPath + "delivery_biz/{id}/departure/start")
-    @ApiOperation(value = "手动触发装货入场流程 消费方:车载APP 场景: 发货企业是外地")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header")
-    })
-    public BaseResponse<String> startDeparture(
-            @ApiParam(allowEmptyValue = true, value = "运单id")
-            @PathVariable(value = "id") String id
-    ) {
-        throw new RuntimeException("stub");
-    }
-
-    @PatchMapping(value = apiPath + "delivery_biz/{id}/arrival/start")
-    @ApiOperation(value = "手动触发卸货入场流程 消费方:车载APP 场景: 收货企业是外地")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = tokenHeader, defaultValue = tokenStarts, value = "access_token", dataType = "string", paramType = "header")
-    })
-    public BaseResponse<String> startArrival(
-            @ApiParam(allowEmptyValue = true, value = "运单id")
-            @PathVariable(value = "id") String id
-    ) {
-        throw new RuntimeException("stub");
-    }
-
 
 }

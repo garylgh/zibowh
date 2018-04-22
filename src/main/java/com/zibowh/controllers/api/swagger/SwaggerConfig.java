@@ -1,7 +1,7 @@
 package com.zibowh.controllers.api.swagger;
 
 import com.google.common.base.Predicate;
-import com.zibowh.controllers.api.APIController;
+import com.zibowh.controllers.api.WayBillController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import static com.google.common.base.Predicates.or;
 import static springfox.documentation.builders.PathSelectors.regex;
 
 /**
@@ -51,12 +52,10 @@ public class SwaggerConfig {
     }
 
     @Bean
-    public Docket deliveryBiz() {
-        return this.docket("在途运单管理", "在途运单管理", "v1", regex(APIController.apiPath + "delivery_biz/.*"));
-    }
-
-    @Bean
-    public Docket cargoCheck() {
-        return this.docket("运单装卸货检查相关", "运单装卸货检查相关", "v1", regex(APIController.apiPath + "cargo_check/.*"));
+    public Docket push() {
+        return this.docket("推送", "推送", "v1", or(
+                regex(WayBillController.apiPath + ".*"),
+                regex(WayBillController.apiPath + ".*")
+        ));
     }
 }
