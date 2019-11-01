@@ -37,7 +37,7 @@ public class HessianSerializer implements Serializer {
                 hessian2Output.close();
             }
         } catch (Exception e) {
-            LOGGER.error("关闭hession通道异常",e.getMessage(), e);
+            LOGGER.error("关闭hession通道异常", e.getMessage(), e);
         }
 
     }
@@ -48,7 +48,7 @@ public class HessianSerializer implements Serializer {
                 hessian2Input.close();
             }
         } catch (Exception e) {
-            LOGGER.error("关闭hession通道异常",e.getMessage(), e);
+            LOGGER.error("关闭hession通道异常", e.getMessage(), e);
         }
 
     }

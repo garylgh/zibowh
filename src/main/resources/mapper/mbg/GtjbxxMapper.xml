@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.GtjbxxMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.Gtjbxx">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="GT_CODE" jdbcType="VARCHAR" property="gtCode" />
+    <result column="GTCNAME" jdbcType="VARCHAR" property="gtcname" />
+    <result column="CAR_CARDNO" jdbcType="VARCHAR" property="carCardno" />
+    <result column="IS_CARD" jdbcType="VARCHAR" property="isCard" />
+    <result column="CAR_TYPE" jdbcType="INTEGER" property="carType" />
+    <result column="ENTERPRISE_NAME" jdbcType="VARCHAR" property="enterpriseName" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="IS_ADRESS" jdbcType="INTEGER" property="isAdress" />
+    <result column="CAR_STATE" jdbcType="INTEGER" property="carState" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.SczdListMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.SczdList">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="INOUTLOADINGER_REGION_NO" jdbcType="VARCHAR" property="inoutloadingerRegionNo" />
+    <result column="CWBH" jdbcType="VARCHAR" property="cwbh" />
+    <result column="VEHICLE_CODE" jdbcType="VARCHAR" property="vehicleCode" />
+    <result column="EQUIPMEN_NO" jdbcType="VARCHAR" property="equipmenNo" />
+    <result column="IPUT_TIME" jdbcType="DATE" property="iputTime" />
+  </resultMap>
+</mapper>

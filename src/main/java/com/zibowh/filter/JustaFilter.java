@@ -10,6 +10,7 @@ import java.io.IOException;
 @WebFilter("/*")
 public class JustaFilter implements Filter {
     private final Logger log = LoggerFactory.getLogger(getClass());
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -18,8 +19,8 @@ public class JustaFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
-        log.info("*********************TestFilter1*********************");
-        filterChain.doFilter(servletRequest,servletResponse);
+        //log.info("*********************TestFilter1*********************");
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override

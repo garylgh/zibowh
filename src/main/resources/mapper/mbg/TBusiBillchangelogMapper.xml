@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBusiBillchangelogMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBusiBillchangelog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="LOG_ID" jdbcType="VARCHAR" property="logId" />
+    <result column="BILL_ID" jdbcType="VARCHAR" property="billId" />
+    <result column="BILLNUM" jdbcType="VARCHAR" property="billnum" />
+    <result column="BILLSTATE" jdbcType="INTEGER" property="billstate" />
+    <result column="CHANGENOTE" jdbcType="VARCHAR" property="changenote" />
+    <result column="CHANGETIME" jdbcType="TIMESTAMP" property="changetime" />
+    <result column="CHANGETYPE" jdbcType="INTEGER" property="changetype" />
+    <result column="OUSER_ID" jdbcType="VARCHAR" property="ouserId" />
+    <result column="ONAME" jdbcType="VARCHAR" property="oname" />
+    <result column="LON" jdbcType="DECIMAL" property="lon" />
+    <result column="LAT" jdbcType="DECIMAL" property="lat" />
+    <result column="WARNING" jdbcType="VARCHAR" property="warning" />
+    <result column="Column_13" jdbcType="CHAR" property="column13" />
+    <result column="Column_14" jdbcType="CHAR" property="column14" />
+    <result column="Column_15" jdbcType="CHAR" property="column15" />
+    <result column="Column_16" jdbcType="CHAR" property="column16" />
+    <result column="Column_17" jdbcType="CHAR" property="column17" />
+  </resultMap>
+</mapper>

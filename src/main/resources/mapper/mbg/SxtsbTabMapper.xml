@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.SxtsbTabMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.SxtsbTab">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="EQUIPMEN_NO" jdbcType="VARCHAR" property="equipmenNo" />
+    <result column="EQUIPMEN_STATUS" jdbcType="VARCHAR" property="equipmenStatus" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="USER_ID" jdbcType="VARCHAR" property="userId" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="GROUPID" jdbcType="VARCHAR" property="groupid" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="LON" jdbcType="VARCHAR" property="lon" />
+    <result column="LAT" jdbcType="VARCHAR" property="lat" />
+    <result column="AFFILIATED_ENTERPRISE_ID" jdbcType="VARCHAR" property="affiliatedEnterpriseId" />
+    <result column="RESERVE_COL_4" jdbcType="VARCHAR" property="reserveCol4" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="TIMESTAMP" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+</mapper>

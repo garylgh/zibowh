@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.UnloadingRegionMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.UnloadingRegion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="INOUTLOADINGER_REGION_NO" jdbcType="VARCHAR" property="inoutloadingerRegionNo" />
+    <result column="ZXQYMC" jdbcType="VARCHAR" property="zxqymc" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="ZXQLX" jdbcType="VARCHAR" property="zxqlx" />
+    <result column="ZXHWNO" jdbcType="VARCHAR" property="zxhwno" />
+    <result column="ZXHWMC" jdbcType="VARCHAR" property="zxhwmc" />
+    <result column="INPUT_DATE" jdbcType="DATE" property="inputDate" />
+    <result column="ELECTRONIC_FENCE_INFO" jdbcType="VARCHAR" property="electronicFenceInfo" />
+    <result column="LON" jdbcType="VARCHAR" property="lon" />
+    <result column="LAT" jdbcType="VARCHAR" property="lat" />
+    <result column="LONGA" jdbcType="DOUBLE" property="longa" />
+    <result column="WIDE" jdbcType="DOUBLE" property="wide" />
+    <result column="VOLUME" jdbcType="DOUBLE" property="volume" />
+    <result column="AFFILIATED_ENTERPRISE_ID" jdbcType="VARCHAR" property="affiliatedEnterpriseId" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="TIMESTAMP" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+</mapper>

@@ -37,7 +37,7 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
     private void init() {
         try {
             JedisPoolConfig jedisConfig = new JedisPoolConfig();
-            LOG.info("redis 初始化配置 {}"+ redisConfig);
+            LOG.info("redis 初始化配置 {}" + redisConfig);
 //            jedisConfig.setMaxTotal(redisConfig.getMaxTotal());
 //            jedisConfig.setMaxIdle(300);
 //            jedisConfig.setMinIdle(0);
@@ -305,12 +305,13 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
         return doCache(new CacheCallback<Jedis, Double>() {
             @Override
             public Double callback(Jedis cache) {
-                return cache.zscore(key,member);
+                return cache.zscore(key, member);
             }
         });
     }
 
-    @Override public Long zcard(String key) {
+    @Override
+    public Long zcard(String key) {
         return doCache(new CacheCallback<Jedis, Long>() {
             @Override
             public Long callback(Jedis cache) {
@@ -319,20 +320,22 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
         });
     }
 
-    @Override public Long zcount(String key, double min, double max) {
+    @Override
+    public Long zcount(String key, double min, double max) {
         return doCache(new CacheCallback<Jedis, Long>() {
             @Override
             public Long callback(Jedis cache) {
-                return cache.zcount(key,min,max);
+                return cache.zcount(key, min, max);
             }
         });
     }
 
-    @Override public Long zadd(String key, double score, String member) {
+    @Override
+    public Long zadd(String key, double score, String member) {
         return doCache(new CacheCallback<Jedis, Long>() {
             @Override
             public Long callback(Jedis cache) {
-                return cache.zadd(key,score,member);
+                return cache.zadd(key, score, member);
             }
         });
     }
@@ -378,7 +381,7 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
     }
 
 
-    public Long tryLock(final String key, final String value,final int second) {
+    public Long tryLock(final String key, final String value, final int second) {
 
         Long isSuccess = setnx(key, value);
         expire(key, second);
@@ -393,32 +396,32 @@ public class RedisUtils extends AbstractRedisCache<Jedis> implements Cache<Jedis
     }
 
 
-    public Long sadd(final String key, final String... members){
+    public Long sadd(final String key, final String... members) {
 
         return doCache(new CacheCallback<Jedis, Long>() {
             @Override
             public Long callback(Jedis cache) {
-                return cache.sadd(key,members);
+                return cache.sadd(key, members);
             }
         });
     }
 
 
-    public Boolean sismember(final String key, final String member){
-        return doCache(new CacheCallback<Jedis,Boolean>() {
+    public Boolean sismember(final String key, final String member) {
+        return doCache(new CacheCallback<Jedis, Boolean>() {
             @Override
-            public Boolean  callback(Jedis cache) {
-                return cache.sismember(key,member);
+            public Boolean callback(Jedis cache) {
+                return cache.sismember(key, member);
             }
         });
     }
 
 
-    public Long srem(final String key, final String... members){
+    public Long srem(final String key, final String... members) {
         return doCache(new CacheCallback<Jedis, Long>() {
             @Override
             public Long callback(Jedis cache) {
-                return cache.srem(key,members);
+                return cache.srem(key, members);
             }
         });
     }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.EmployeeMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.Employee">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="EMP_ID" jdbcType="VARCHAR" property="empId" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="SEX" jdbcType="CHAR" property="sex" />
+    <result column="BIRTHDAY" jdbcType="DATE" property="birthday" />
+    <result column="CARD_TYPE" jdbcType="INTEGER" property="cardType" />
+    <result column="IDCARD" jdbcType="VARCHAR" property="idcard" />
+    <result column="PHONE" jdbcType="VARCHAR" property="phone" />
+    <result column="ADRESSS" jdbcType="VARCHAR" property="adresss" />
+    <result column="IS_LOCAL" jdbcType="INTEGER" property="isLocal" />
+    <result column="CITY" jdbcType="VARCHAR" property="city" />
+    <result column="ADRESS" jdbcType="VARCHAR" property="adress" />
+    <result column="PHOTO_URL" jdbcType="VARCHAR" property="photoUrl" />
+    <result column="FLAG" jdbcType="INTEGER" property="flag" />
+    <result column="INS_USER" jdbcType="VARCHAR" property="insUser" />
+    <result column="INS_TIME" jdbcType="VARCHAR" property="insTime" />
+    <result column="UPD_USER" jdbcType="VARCHAR" property="updUser" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+  </resultMap>
+</mapper>

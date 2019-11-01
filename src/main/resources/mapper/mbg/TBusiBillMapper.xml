@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBusiBillMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBusiBill">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="BILLNO" jdbcType="VARCHAR" property="billno" />
+    <result column="BILLNUM" jdbcType="VARCHAR" property="billnum" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="OWNERTYPE" jdbcType="INTEGER" property="ownertype" />
+    <result column="BILLTYPE" jdbcType="INTEGER" property="billtype" />
+    <result column="BILLSTATE" jdbcType="VARCHAR" property="billstate" />
+    <result column="QRCODE" jdbcType="VARCHAR" property="qrcode" />
+    <result column="BILLGENTIME" jdbcType="TIMESTAMP" property="billgentime" />
+    <result column="SNAME" jdbcType="VARCHAR" property="sname" />
+    <result column="STEL" jdbcType="VARCHAR" property="stel" />
+    <result column="SNAME_ID" jdbcType="VARCHAR" property="snameId" />
+    <result column="RNAME_ID" jdbcType="VARCHAR" property="rnameId" />
+    <result column="RNAME" jdbcType="VARCHAR" property="rname" />
+    <result column="RTTEL" jdbcType="VARCHAR" property="rttel" />
+    <result column="STARTPOS" jdbcType="VARCHAR" property="startpos" />
+    <result column="SZIPCODE" jdbcType="VARCHAR" property="szipcode" />
+    <result column="ENDPOS" jdbcType="VARCHAR" property="endpos" />
+    <result column="EZIPCODE" jdbcType="VARCHAR" property="ezipcode" />
+    <result column="LOADDATE" jdbcType="TIMESTAMP" property="loaddate" />
+    <result column="UNLOADDTE" jdbcType="TIMESTAMP" property="unloaddte" />
+    <result column="GOODSINFO" jdbcType="VARCHAR" property="goodsinfo" />
+    <result column="LINEID" jdbcType="VARCHAR" property="lineid" />
+    <result column="LINENAME" jdbcType="VARCHAR" property="linename" />
+    <result column="LINEMILE" jdbcType="DECIMAL" property="linemile" />
+    <result column="YSNAME_ID" jdbcType="VARCHAR" property="ysnameId" />
+    <result column="YSNAME" jdbcType="VARCHAR" property="ysname" />
+    <result column="YSMCERTID" jdbcType="VARCHAR" property="ysmcertid" />
+    <result column="YSENTTEL" jdbcType="VARCHAR" property="ysenttel" />
+    <result column="VEHICL_ID" jdbcType="VARCHAR" property="vehiclId" />
+    <result column="VEHICL_CODE" jdbcType="VARCHAR" property="vehiclCode" />
+    <result column="CCERTID" jdbcType="VARCHAR" property="ccertid" />
+    <result column="GVEHICLE_ID" jdbcType="VARCHAR" property="gvehicleId" />
+    <result column="GVEHICLE_CODE" jdbcType="VARCHAR" property="gvehicleCode" />
+    <result column="GCCERTID" jdbcType="VARCHAR" property="gccertid" />
+    <result column="JSYNAME" jdbcType="VARCHAR" property="jsyname" />
+    <result column="JSYID_ECERT" jdbcType="VARCHAR" property="jsyidEcert" />
+    <result column="JSYTEL" jdbcType="VARCHAR" property="jsytel" />
+    <result column="YYYNAME" jdbcType="VARCHAR" property="yyyname" />
+    <result column="YYYID_ECERT" jdbcType="VARCHAR" property="yyyidEcert" />
+    <result column="YYYTEL" jdbcType="VARCHAR" property="yyytel" />
+    <result column="PRINTIME" jdbcType="TIMESTAMP" property="printime" />
+    <result column="CREATTIME" jdbcType="TIMESTAMP" property="creattime" />
+    <result column="CREATEOR" jdbcType="VARCHAR" property="createor" />
+    <result column="ATTENTIONNOTE" jdbcType="VARCHAR" property="attentionnote" />
+    <result column="HANDLENOTE" jdbcType="VARCHAR" property="handlenote" />
+    <result column="DEL_FLG" jdbcType="INTEGER" property="delFlg" />
+    <result column="CANCELOPER" jdbcType="VARCHAR" property="canceloper" />
+    <result column="CANCELTIME" jdbcType="TIMESTAMP" property="canceltime" />
+    <result column="DISP_EXPINFO" jdbcType="VARCHAR" property="dispExpinfo" />
+    <result column="TON" jdbcType="DECIMAL" property="ton" />
+    <result column="HWZZL" jdbcType="DECIMAL" property="hwzzl" />
+    <result column="TASK_ID" jdbcType="VARCHAR" property="taskId" />
+    <result column="CANCELREASON" jdbcType="VARCHAR" property="cancelreason" />
+    <result column="APPJDZT" jdbcType="INTEGER" property="appjdzt" />
+    <result column="APPRECVTIME" jdbcType="TIMESTAMP" property="apprecvtime" />
+    <result column="APPOPENTIME" jdbcType="TIMESTAMP" property="appopentime" />
+    <result column="TYDBH" jdbcType="VARCHAR" property="tydbh" />
+    <result column="JSY_EID" jdbcType="VARCHAR" property="jsyEid" />
+    <result column="YYY_EID" jdbcType="VARCHAR" property="yyyEid" />
+  </resultMap>
+</mapper>

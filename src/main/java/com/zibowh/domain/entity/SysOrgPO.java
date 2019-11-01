@@ -6,6 +6,7 @@ public class SysOrgPO {
     private String orgName;
     private String name;
     private String position;
+    private String counties;
 
     public String getId() {
         return id;
@@ -54,6 +55,4 @@ public class SysOrgPO {
     public void setCounties(String counties) {
         this.counties = counties;
     }
-
-    private String counties;
 }

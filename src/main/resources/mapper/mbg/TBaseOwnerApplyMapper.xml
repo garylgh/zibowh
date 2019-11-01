@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBaseOwnerApplyMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBaseOwnerApply">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="EMP_APPLY_ID" jdbcType="VARCHAR" property="empApplyId" />
+    <result column="EMP_NAME" jdbcType="TIMESTAMP" property="empName" />
+    <result column="CONTENT" jdbcType="VARCHAR" property="content" />
+    <result column="APPLY_DEPT" jdbcType="VARCHAR" property="applyDept" />
+    <result column="APPLY_NAME" jdbcType="VARCHAR" property="applyName" />
+    <result column="OPERATION" jdbcType="VARCHAR" property="operation" />
+    <result column="APPLY_TIME" jdbcType="DATE" property="applyTime" />
+    <result column="TOWNSHIPRS" jdbcType="INTEGER" property="townshiprs" />
+    <result column="COUNTYRS" jdbcType="INTEGER" property="countyrs" />
+    <result column="CITYRS" jdbcType="INTEGER" property="cityrs" />
+    <result column="RESUT" jdbcType="VARCHAR" property="resut" />
+  </resultMap>
+</mapper>

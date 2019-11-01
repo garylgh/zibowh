@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.UnloadingGoodsManageTabMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.UnloadingGoodsManageTab">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="com_id" jdbcType="VARCHAR" property="comId" />
+    <result column="com_name" jdbcType="VARCHAR" property="comName" />
+    <result column="waybill_id" jdbcType="VARCHAR" property="waybillId" />
+    <result column="vehicle_pai" jdbcType="VARCHAR" property="vehiclePai" />
+    <result column="vehicle_status" jdbcType="VARCHAR" property="vehicleStatus" />
+    <result column="vehicle_jsy" jdbcType="VARCHAR" property="vehicleJsy" />
+    <result column="driver_status" jdbcType="VARCHAR" property="driverStatus" />
+    <result column="vehicle_yyy" jdbcType="VARCHAR" property="vehicleYyy" />
+    <result column="supercargo_status" jdbcType="VARCHAR" property="supercargoStatus" />
+    <result column="loadinger" jdbcType="VARCHAR" property="loadinger" />
+    <result column="loadinger_status" jdbcType="VARCHAR" property="loadingerStatus" />
+    <result column="loading_chkin_date" jdbcType="VARCHAR" property="loadingChkinDate" />
+    <result column="loading_chkout_date" jdbcType="VARCHAR" property="loadingChkoutDate" />
+    <result column="loading_region_no" jdbcType="VARCHAR" property="loadingRegionNo" />
+    <result column="loading_date" jdbcType="VARCHAR" property="loadingDate" />
+    <result column="loading_type1" jdbcType="VARCHAR" property="loadingType1" />
+    <result column="loading_over_date" jdbcType="VARCHAR" property="loadingOverDate" />
+    <result column="unloadinger" jdbcType="VARCHAR" property="unloadinger" />
+    <result column="unloadinger_status" jdbcType="VARCHAR" property="unloadingerStatus" />
+    <result column="unloading_region_no" jdbcType="VARCHAR" property="unloadingRegionNo" />
+    <result column="unloading_chkin_date" jdbcType="VARCHAR" property="unloadingChkinDate" />
+    <result column="unloading_date" jdbcType="VARCHAR" property="unloadingDate" />
+    <result column="unloading_chkout_date" jdbcType="VARCHAR" property="unloadingChkoutDate" />
+    <result column="unloading_name" jdbcType="VARCHAR" property="unloadingName" />
+    <result column="reserve_col_1" jdbcType="VARCHAR" property="reserveCol1" />
+    <result column="reserve_col_2" jdbcType="VARCHAR" property="reserveCol2" />
+    <result column="reserve_col_3" jdbcType="VARCHAR" property="reserveCol3" />
+    <result column="reserve_col_4" jdbcType="VARCHAR" property="reserveCol4" />
+    <result column="reserve_col_5" jdbcType="VARCHAR" property="reserveCol5" />
+    <result column="reserve_col_6" jdbcType="VARCHAR" property="reserveCol6" />
+    <result column="reserve_col_7" jdbcType="VARCHAR" property="reserveCol7" />
+    <result column="reserve_col_8" jdbcType="VARCHAR" property="reserveCol8" />
+    <result column="ins_user" jdbcType="VARCHAR" property="insUser" />
+    <result column="ins_time" jdbcType="TIMESTAMP" property="insTime" />
+    <result column="upd_user" jdbcType="VARCHAR" property="updUser" />
+    <result column="upd_time" jdbcType="TIMESTAMP" property="updTime" />
+    <result column="unloading_over_date" jdbcType="VARCHAR" property="unloadingOverDate" />
+    <result column="Column_39" jdbcType="CHAR" property="column39" />
+    <result column="Column_40" jdbcType="CHAR" property="column40" />
+    <result column="Column_41" jdbcType="CHAR" property="column41" />
+    <result column="Column_42" jdbcType="CHAR" property="column42" />
+    <result column="Column_43" jdbcType="CHAR" property="column43" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBusiBillChangeRecordMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBusiBillChangeRecord">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="YD_BH" jdbcType="VARCHAR" property="ydBh" />
+    <result column="YD_ZT" jdbcType="INTEGER" property="ydZt" />
+    <result column="UPD_TIME" jdbcType="TIMESTAMP" property="updTime" />
+    <result column="UPD_ID" jdbcType="VARCHAR" property="updId" />
+    <result column="UPD_NAME" jdbcType="VARCHAR" property="updName" />
+    <result column="UPD_ZT" jdbcType="INTEGER" property="updZt" />
+  </resultMap>
+</mapper>

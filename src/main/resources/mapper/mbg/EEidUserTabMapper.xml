@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.EEidUserTabMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.EEidUserTab">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="EMP_ID" jdbcType="VARCHAR" property="empId" />
+    <result column="ID_CARD" jdbcType="VARCHAR" property="idCard" />
+    <result column="EID_ID" jdbcType="VARCHAR" property="eidId" />
+  </resultMap>
+</mapper>

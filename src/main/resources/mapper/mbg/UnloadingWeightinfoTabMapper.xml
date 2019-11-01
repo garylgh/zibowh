@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.UnloadingWeightinfoTabMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.UnloadingWeightinfoTab">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bill_num" jdbcType="VARCHAR" property="billNum" />
+    <result column="loading_after_weight" jdbcType="DOUBLE" property="loadingAfterWeight" />
+    <result column="loading_first_weight" jdbcType="DOUBLE" property="loadingFirstWeight" />
+    <result column="unloading_first_weight" jdbcType="DOUBLE" property="unloadingFirstWeight" />
+    <result column="unloading_after_weight" jdbcType="DOUBLE" property="unloadingAfterWeight" />
+    <result column="loading_weight" jdbcType="DOUBLE" property="loadingWeight" />
+    <result column="unloading_weight" jdbcType="DOUBLE" property="unloadingWeight" />
+    <result column="zhrcgbsj" jdbcType="TIMESTAMP" property="zhrcgbsj" />
+    <result column="zhccgbsj" jdbcType="TIMESTAMP" property="zhccgbsj" />
+    <result column="xhrcgbsj" jdbcType="TIMESTAMP" property="xhrcgbsj" />
+    <result column="xhccgbsj" jdbcType="TIMESTAMP" property="xhccgbsj" />
+  </resultMap>
+</mapper>

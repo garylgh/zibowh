@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.SecurityfileMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.Securityfile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="FILEID" jdbcType="VARCHAR" property="fileid" />
+    <result column="FILENAME" jdbcType="VARCHAR" property="filename" />
+    <result column="FILETYPE" jdbcType="VARCHAR" property="filetype" />
+    <result column="FILEDATE" jdbcType="TIMESTAMP" property="filedate" />
+    <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId" />
+    <result column="FILE" jdbcType="LONGVARCHAR" property="file" />
+  </resultMap>
+</mapper>

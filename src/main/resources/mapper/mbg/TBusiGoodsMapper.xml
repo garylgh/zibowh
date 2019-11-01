@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zibowh.domain.mapper.mbg.TBusiGoodsMapper">
+  <resultMap id="BaseResultMap" type="com.zibowh.domain.entity.mbg.TBusiGoods">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="VARCHAR" property="id" />
+    <result column="BILL_ID" jdbcType="VARCHAR" property="billId" />
+    <result column="WXP_ID" jdbcType="VARCHAR" property="wxpId" />
+    <result column="PACKAGE_ID" jdbcType="VARCHAR" property="packageId" />
+    <result column="UNCODE" jdbcType="VARCHAR" property="uncode" />
+    <result column="GNAME" jdbcType="VARCHAR" property="gname" />
+    <result column="GBM" jdbcType="VARCHAR" property="gbm" />
+    <result column="LB" jdbcType="VARCHAR" property="lb" />
+    <result column="XB" jdbcType="VARCHAR" property="xb" />
+    <result column="PTYPE" jdbcType="VARCHAR" property="ptype" />
+    <result column="SPEC" jdbcType="VARCHAR" property="spec" />
+    <result column="GWEIGHT" jdbcType="DECIMAL" property="gweight" />
+    <result column="GSIZE" jdbcType="DECIMAL" property="gsize" />
+  </resultMap>
+</mapper>

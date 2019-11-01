@@ -14,7 +14,7 @@ public abstract class AbstractRedisCache<T> implements Cache<T> {
             // 调用具体的缓存操作
             return callback.callback(cache);
         } catch (Exception e) {
-            LOG.error("redis 操作发生异常 {}",e.getMessage(), e);
+            LOG.error("redis 操作发生异常 {}", e.getMessage(), e);
             return null;
         } finally {
             close(cache);
@@ -23,16 +23,17 @@ public abstract class AbstractRedisCache<T> implements Cache<T> {
 
     /**
      * 将redis返回资源池,调用实现类的returnResource方法
+     *
      * @param cache
      */
-    private void close(T cache){
+    private void close(T cache) {
         try {
             if (cache != null) {
                 //关闭缓存操作资源
                 returnResource(cache);
             }
-        }catch (Exception e){
-            LOG.error("redis 操作发生异常 {}",e.getMessage(), e);
+        } catch (Exception e) {
+            LOG.error("redis 操作发生异常 {}", e.getMessage(), e);
         }
     }
 

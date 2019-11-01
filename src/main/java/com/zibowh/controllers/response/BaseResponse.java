@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 
 /**
  * 订单返回结果
- * 
+ *
  * @author ghlin
  * @since 2018-04-15
  */
@@ -19,7 +19,67 @@ public class BaseResponse<T> {
 
     private T data;
 
-    private BaseResponse() {}
+    private BaseResponse() {
+    }
+
+    /**
+     * 创建响应体，成功返回，设置返回的数据
+     *
+     * @param data
+     * @return 响应体
+     */
+    public static <E> BaseResponse<E> build(E data) {
+        return build(HttpStatus.OK.value(), Errors.SUCCESS, data);
+    }
+
+    /**
+     * 创建响应体，成功返回，设置返回的数据，单独设置http状态码
+     *
+     * @param httpStatus HTTP状态码
+     * @param data
+     * @return 响应体
+     */
+    public static <E> BaseResponse<E> build(int httpStatus, E data) {
+        return build(httpStatus, Errors.SUCCESS, data);
+    }
+
+    /**
+     * 创建响应体，有错误，但http状态仍是HttpStatus.OK
+     *
+     * @param error 错误信息
+     * @return 响应体
+     */
+    public static <E> BaseResponse<E> build(Errors error) {
+        return build(HttpStatus.OK.value(), error, null);
+    }
+
+    /**
+     * 创建响应体，有错误，单独设置http状态码
+     *
+     * @param httpStatus HTTP状态码
+     * @param error      错误信息
+     * @return 响应体
+     */
+    public static <E> BaseResponse<E> build(int httpStatus, Errors error) {
+        return build(httpStatus, error, null);
+    }
+
+    /**
+     * 创建响应体。
+     *
+     * @param httpStatus HTTP状态码
+     * @param error      错误信息
+     * @param data       返回的数据
+     * @return 响应体
+     */
+    public static <E> BaseResponse<E> build(int httpStatus, Errors error, E data) {
+        BaseResponse<E> response = new BaseResponse<>();
+        response.data = data;
+        response.httpStatus = httpStatus;
+        response.code = error.getCode();
+        response.msg = error.getMessage();
+        return response;
+    }
 
     public T getData() {
         return data;
@@ -51,64 +111,5 @@ public class BaseResponse<T> {
 
     public void setMsg(String msg) {
         this.msg = msg;
-    }
-
-    /**
-     * 创建响应体，成功返回，设置返回的数据
-     * 
-     * @param data
-     * @return 响应体
-     */
-    public static <E> BaseResponse<E> build(E data) {
-        return build(HttpStatus.OK.value(), Errors.SUCCESS, data);
-    }
-
-    /**
-     * 创建响应体，成功返回，设置返回的数据，单独设置http状态码
-     * 
-     * @param httpStatus HTTP状态码
-     * @param data
-     * @return 响应体
-     */
-    public static <E> BaseResponse<E> build(int httpStatus, E data) {
-        return build(httpStatus, Errors.SUCCESS, data);
-    }
-
-    /**
-     * 创建响应体，有错误，但http状态仍是HttpStatus.OK
-     * 
-     * @param error 错误信息
-     * @return 响应体
-     */
-    public static <E> BaseResponse<E> build(Errors error) {
-        return build(HttpStatus.OK.value(), error, null);
-    }
-
-    /**
-     * 创建响应体，有错误，单独设置http状态码
-     * 
-     * @param httpStatus HTTP状态码
-     * @param error 错误信息
-     * @return 响应体
-     */
-    public static <E> BaseResponse<E> build(int httpStatus, Errors error) {
-        return build(httpStatus, error, null);
-    }
-
-    /**
-     * 创建响应体。
-     * 
-     * @param httpStatus HTTP状态码
-     * @param error 错误信息
-     * @param data 返回的数据
-     * @return 响应体
-     */
-    public static <E> BaseResponse<E> build(int httpStatus, Errors error, E data) {
-        BaseResponse<E> response = new BaseResponse<>();
-        response.data = data;
-        response.httpStatus = httpStatus;
-        response.code = error.getCode();
-        response.msg = error.getMessage();
-        return response;
     }
 }
